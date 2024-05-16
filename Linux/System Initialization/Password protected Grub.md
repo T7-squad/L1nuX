@@ -1,0 +1,24 @@
+
+1. Create a new password hash with the command :
+   
+```
+   grub-mkpasswd-pbkdf2
+```
+
+![[Pasted image 20240414170707.png]]
+
+2. Copy the hash to the `/etc/grub.d/40-custom` :
+   
+```bash
+set superusers="ubuntu"
+password_pbkdf2 ubuntu grub.pbkdf2.sha512.10000.7A9866B2457D30C1A9F337D065DE1D530688AEB49538A46731796272804A9D4C01FBB40E0AE5DE002FD1EDF477ADB475E31DD25EF180C0781070C82BCBAC6B3C.69162071C865CD9DFD9194BEBF25FB6CA41DC96C69A5E20324485241CC5BE15D5BA49D42668F091969C25B074DCFBA86909C53F9B0002780CFCE94A625F4E428
+
+```
+
+![[Pasted image 20240414181517.png]]
+
+3. Update Grub with :
+![[Pasted image 20240414170834.png]]
+
+4. Reboot 
+![[Pasted image 20240414180742.png]]
